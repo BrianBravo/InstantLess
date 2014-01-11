@@ -16,80 +16,8 @@ body {
     min-width: 320px;
 }
 
-header {
-
-}
-
-.nav_toggle {
-    float: right;
-    padding: 0 .4rem;
-    border-radius: .2rem;
-    cursor: pointer;
-    .default_transition(background-color);
-
-    &:hover {
-        background-color: lighten(@charcoal, 10%);
-    }
-
-    &:hover i {
-        opacity: 1;
-    }
-
-    i {
-        font-size: 1.6rem;
-        color: @white;
-        position: relative;
-        opacity: .6;
-        &.icon-sort-down {top: -.3rem;}
-        &.icon-sort-up {bottom: -.3rem;}
-        .default_transition(opacity);
-    }
-}
-
-nav {
-    display: none;
-
-    &.on {
-        display: block;
-    }
-    li {
-        display: block;
-
-        a {
-            display: block;
-            padding: 1.2rem 1rem;
-            font-size: 1rem;
-            color: @white;
-            border-bottom: 1px solid fade(@lightgray, 70%);
-            .default_transition(background-color);
-
-            &:hover, &.selected {
-                background-color: black;
-            }
-        }
-    }
-}
-
-footer {
-    background-color: black;
-    color: @white;
-
-    ul {
-        display: block;
-        padding-top: 1.2rem;
-        li {
-            padding: 0 1rem 1.6rem .2rem;
-
-            a:hover .code {
-                opacity: 1;
-                .default_transition(opacity);
-            }
-        } 
-    }
-}
-
 /* auxiliary */
-
+.clear {clear:both;}
 
 /* modules */
 
@@ -127,60 +55,9 @@ footer {
 {
     .mq-tracker{
         background: green;
-        color:black
+        color:black;
         &:after {
             content: "min-width: 640px";
-        }
-    }
-
-    .mobile {display: none;}
-
-    nav {
-        display: block;
-        background-color: @charcoal;
-        border-top: 1px solid fade(@white, 10%);
-        li {
-            display: inline;
-
-            &:hover .code {
-                opacity: 1;
-            }
-            a {
-                float:left;
-                border-bottom: none;
-                padding: .4rem 1rem;
-                font-size: .7rem;
-
-                &:hover, &.selected {
-                    background-color: darken(@charcoal, 4%);
-                }
-            }
-        }
-    }
-
-    footer {
-        ul {
-            padding: 0;
-
-            li {
-                float:left;
-                font-size: .6rem;
-                padding: .6rem .6rem;
-            }
-        }
-        .text_links {
-            width: auto;
-        }
-        .social_links {
-            width: auto;
-            position: relative;
-            top: .1rem;
-            padding-top: .3rem;
-
-            li {
-                font-size: .9rem;
-                padding: 0 .6rem;
-            }
         }
     }
 }
@@ -193,16 +70,6 @@ footer {
             content: "min-width: 800px";
         }
     }   
-
-    header, footer {
-        max-width: 960px;
-        margin: 0 auto;
-    }
-
-    nav ul{
-        max-width: 960px;
-        margin: 0 auto;
-    }
 }
 
 @media screen and (min-width: 960px)
